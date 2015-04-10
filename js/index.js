@@ -16,6 +16,18 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ var map;
+        var marker;
+		var imageBounds1;
+var imageBounds2;
+var imageBounds3;
+var imageBounds4;
+var rectangulo = new google.maps.Rectangle();
+var oldmap1;
+var oldmap2;
+var oldmap3;
+var oldmap4;
+ 
 var app = {
     // Application Constructor
     initialize: function() {
@@ -37,9 +49,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+       
 		cargarMapa();
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:none;');
@@ -48,19 +58,9 @@ var app = {
     }
 };
 
-var map;
-        var marker;
-		var imageBounds1;
-var imageBounds2;
-var imageBounds3;
-var imageBounds4;
-var rectangulo = new google.maps.Rectangle();
-var oldmap1;
-var oldmap2;
-var oldmap3;
-var oldmap4;
+
 function cargarMapa() {
-alert("hello");
+alert("1");
 					var mapOptions = {
 						zoom: 17
 					};
@@ -72,7 +72,7 @@ alert("hello");
 						new google.maps.LatLng(18.860879329595857, -99.34311836957932), 
 						new google.maps.LatLng(19.028447938103028, -99.18035387992859)
 					);
-
+alert("2");
 					var oldmap = new google.maps.GroundOverlay("http://etpsoluciones.com/sistemas/distritos/images/mapa.png", imageBounds);
 					//oldmap.setMap(map);
 					
@@ -115,7 +115,9 @@ alert("hello");
 					
 
 		  // Try HTML5 geolocation
+		  alert("3");
 			if(navigator.geolocation) {
+			alert("4");
 				navigator.geolocation.getCurrentPosition(function(position) {
 					var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 					marker.setPosition(pos);
@@ -155,9 +157,11 @@ alert("hello");
 					
 					map.setCenter(pos);
 				}, function() {
+				alert("6");
 				  handleNoGeolocation(true);
 				});
 			 } else {
+			 alert("5");
 				// Browser doesn't support Geolocation
 				handleNoGeolocation(false);
 			 }
