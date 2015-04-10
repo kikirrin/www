@@ -60,7 +60,8 @@ var app = {
 
 
 function cargarMapa() {
-alert("1");
+ $("#map_canvas").css("height", $(window).height() - 30);
+
 					var mapOptions = {
 						zoom: 17
 					};
@@ -72,7 +73,7 @@ alert("1");
 						new google.maps.LatLng(18.860879329595857, -99.34311836957932), 
 						new google.maps.LatLng(19.028447938103028, -99.18035387992859)
 					);
-alert("2");
+
 					var oldmap = new google.maps.GroundOverlay("http://etpsoluciones.com/sistemas/distritos/images/mapa.png", imageBounds);
 					//oldmap.setMap(map);
 					
@@ -115,7 +116,7 @@ alert("2");
 					
 
 		  // Try HTML5 geolocation
-		  alert("3");
+	
 			if(navigator.geolocation) {
 			alert("4");
 				navigator.geolocation.getCurrentPosition(function(position) {
