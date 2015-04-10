@@ -60,6 +60,7 @@ var oldmap2;
 var oldmap3;
 var oldmap4;
 function cargarMapa() {
+alert("hello");
 					var mapOptions = {
 						zoom: 17
 					};
