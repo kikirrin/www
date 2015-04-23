@@ -28,17 +28,7 @@ var oldmap2;
 var oldmap3;
 var oldmap4;
  
-  $(document).ready(function() {
-            $("#map_canvas").css("height", $(window).height() - 30);
-			cargarMapa();
-			
-
-        });
-
-        $(window).resize(function() {
-            $("#map_canvas").css("height", $(window).height() - 30);
-        });
-
+  
 function cargarMapa() {
  $("#map_canvas").css("height", $(window).height() - 30);
 
@@ -59,7 +49,7 @@ function cargarMapa() {
                                                             new google.maps.LatLng(19.02845554503654, -99.26152221858501));
                                                      
                                                      oldmap1 = new google.maps.GroundOverlay(
-                                                            "http://etpsoluciones.com/sistemas/distritos2/images/1.png",
+                                                            "http://etpsoluciones.com/sistemas/distritos2/img/1.png",
                                                             imageBounds1);
 															
 															var imageBounds2 = new google.maps.LatLngBounds(
@@ -67,7 +57,7 @@ function cargarMapa() {
                                                             new google.maps.LatLng(19.02845554503654, -99.18035387992859));
                                                      
                                                      oldmap2 = new google.maps.GroundOverlay(
-                                                            "http://etpsoluciones.com/sistemas/distritos2/images/2.png",
+                                                            "http://etpsoluciones.com/sistemas/distritos2/img/2.png",
                                                             imageBounds2);
 															
 															var imageBounds3 = new google.maps.LatLngBounds(
@@ -75,7 +65,7 @@ function cargarMapa() {
                                                             new google.maps.LatLng(18.94471003021517, -99.18035387992859));
                                                      
                                                      oldmap3 = new google.maps.GroundOverlay(
-                                                            "http://etpsoluciones.com/sistemas/distritos2/images/3.png",
+                                                            "http://etpsoluciones.com/sistemas/distritos2/img/3.png",
                                                             imageBounds3);
 															
 															var imageBounds4 = new google.maps.LatLngBounds(
@@ -83,7 +73,7 @@ function cargarMapa() {
                                                             new google.maps.LatLng(18.94471003021517, -99.26152221858501));
                                                      
                                                      oldmap4 = new google.maps.GroundOverlay(
-                                                            "http://etpsoluciones.com/sistemas/distritos2/images/4.png",
+                                                            "http://etpsoluciones.com/sistemas/distritos2/img/4.png",
                                                             imageBounds4);
 															
 															
@@ -97,8 +87,7 @@ function cargarMapa() {
 	
 			if(navigator.geolocation) {
 	//		alert("4");
-			$("#app").css("display", "none");
-			$("#map_canvas").css("display", "");
+
 				navigator.geolocation.getCurrentPosition(function(position) {
 					var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 					marker.setPosition(pos);
