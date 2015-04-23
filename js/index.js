@@ -60,7 +60,7 @@ var app = {
 
 
 function cargarMapa() {
- 
+ $("#map_canvas").css("height", $(window).height() - 30);
 
 					var mapOptions = {
 						zoom: 17
