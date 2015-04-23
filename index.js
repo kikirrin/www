@@ -38,6 +38,7 @@ function cargarMapa() {
 					map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 			  
 					marker = new google.maps.Marker({
+					icon: "img/marker.png"
 					});
 					var imageBounds = new google.maps.LatLngBounds(
 						new google.maps.LatLng(18.860879329595857, -99.34311836957932), 
