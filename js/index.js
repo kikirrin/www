@@ -60,7 +60,7 @@ var app = {
 
 
 function cargarMapa() {
- $("#map_canvas").css("height", $(window).height() - 30);
+ 
 
 					var mapOptions = {
 						zoom: 17
@@ -82,7 +82,7 @@ function cargarMapa() {
                                                             new google.maps.LatLng(19.02845554503654, -99.26152221858501));
                                                      
                                                      oldmap1 = new google.maps.GroundOverlay(
-                                                            "images/1.png",
+                                                            "img/1.png",
                                                             imageBounds1);
 															
 															var imageBounds2 = new google.maps.LatLngBounds(
@@ -90,7 +90,7 @@ function cargarMapa() {
                                                             new google.maps.LatLng(19.02845554503654, -99.18035387992859));
                                                      
                                                      oldmap2 = new google.maps.GroundOverlay(
-                                                            "images/2.png",
+                                                            "img/2.png",
                                                             imageBounds2);
 															
 															var imageBounds3 = new google.maps.LatLngBounds(
@@ -98,7 +98,7 @@ function cargarMapa() {
                                                             new google.maps.LatLng(18.94471003021517, -99.18035387992859));
                                                      
                                                      oldmap3 = new google.maps.GroundOverlay(
-                                                            "images/3.png",
+                                                            "img/3.png",
                                                             imageBounds3);
 															
 															var imageBounds4 = new google.maps.LatLngBounds(
@@ -106,7 +106,7 @@ function cargarMapa() {
                                                             new google.maps.LatLng(18.94471003021517, -99.26152221858501));
                                                      
                                                      oldmap4 = new google.maps.GroundOverlay(
-                                                            "images/4.png",
+                                                            "img/4.png",
                                                             imageBounds4);
 															
 					
