@@ -74,9 +74,6 @@ function cargarMapa() {
 						new google.maps.LatLng(19.028447938103028, -99.18035387992859)
 					);
 
-					var oldmap = new google.maps.GroundOverlay("http://etpsoluciones.com/sistemas/distritos/images/mapa.png", imageBounds);
-					//oldmap.setMap(map);
-					
 					var imageBounds1 = new google.maps.LatLngBounds(
                                                             new google.maps.LatLng(18.94471003021517, -99.34311836957932),
                                                             new google.maps.LatLng(19.02845554503654, -99.26152221858501));
