@@ -28,36 +28,16 @@ var oldmap2;
 var oldmap3;
 var oldmap4;
  
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-       
-		cargarMapa();
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:none;');
-		
-        console.log('Received Event: ' + id);
-    }
-};
+  $(document).ready(function() {
+            $("#map_canvas").css("height", $(window).height() - 30);
+			cargarMapa();
+			
 
+        });
+
+        $(window).resize(function() {
+            $("#map_canvas").css("height", $(window).height() - 30);
+        });
 
 function cargarMapa() {
  $("#map_canvas").css("height", $(window).height() - 30);
@@ -117,7 +97,7 @@ function cargarMapa() {
 			if(navigator.geolocation) {
 	//		alert("4");
 			$("#app").css("display", "none");
-			$("#map_canvas").css("display", "block");
+			$("#map_canvas").css("display", "");
 				navigator.geolocation.getCurrentPosition(function(position) {
 					var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 					marker.setPosition(pos);
