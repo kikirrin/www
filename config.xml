@@ -3,16 +3,16 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.helloworld"
+        id        = "com.phonegap.seccionescvca"
         version   = "1.0.0">
 
-    <name>PGBPrueba</name>
+    <name>Secciones Cuernavaca</name>
 
     <description>
-        PGBPrueba sample application that responds to the deviceready event.
+        App que delimita la sección electoral de Cuernavaca en que te encuentras ubicado.
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
+    <author href="http://etpsoluciones.com" email="enrique_hdez.cortes@hotmail.com">
         Kikirrin
     </author>
 
