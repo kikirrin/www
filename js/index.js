@@ -118,7 +118,9 @@ function cargarMapa() {
 		  // Try HTML5 geolocation
 	
 			if(navigator.geolocation) {
-			alert("4");
+	//		alert("4");
+			$("#app").css("display", "none");
+			$("#map_canvas").css("display", "block");
 				navigator.geolocation.getCurrentPosition(function(position) {
 					var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 					marker.setPosition(pos);
@@ -158,11 +160,11 @@ function cargarMapa() {
 					
 					map.setCenter(pos);
 				}, function() {
-				alert("6");
+			//	alert("6");
 				  handleNoGeolocation(true);
 				});
 			 } else {
-			 alert("5");
+	//		 alert("5");
 				// Browser doesn't support Geolocation
 				handleNoGeolocation(false);
 			 }
