@@ -41,7 +41,10 @@
         Define a specific version of PhoneGap to build into your app.
         <preference name="phonegap-version"       value="3.5.0" />
     -->
-
+  <!-- Platforms -->
+	<gap:platform name="ios" />
+<gap:platform name="android" />
+	
     <!-- Plugins -->
 
     <!-- Core plugins -->
