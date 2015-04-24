@@ -20,9 +20,9 @@
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
-    -->
+    
     <preference name="permissions"                value="none"/>
-
+-->
     <!-- Customize your app and platform with the preference element. -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
@@ -81,9 +81,7 @@
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
 
-    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>100</string>
-    </gap:config-file>
+    
 
     <!--
         Define access to external domains.
